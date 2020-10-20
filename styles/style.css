@@ -1,0 +1,357 @@
+@charset "UTF-8";
+.loader__spinner {
+  z-index: 0;
+  animation: spin 3s linear forwards;
+  border: solid 15px #9356DC;
+  border-top-color: #FFF;
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+  position: fixed;
+  left: calc(50% - 75px);
+  top: calc(50% - 75px);
+}
+
+.loader__bkg {
+  background: #99E2D0;
+  background-size: cover;
+  width: 100%;
+  height: 280%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  transform-origin: top;
+  transform: scale(1);
+  animation: bkg 3s forwards;
+}
+
+@keyframes spin {
+  5% {
+    opacity: 1;
+    z-index: 2;
+  }
+  25% {
+    transform: rotate(360deg);
+    opacity: 1;
+    z-index: 2;
+  }
+  50% {
+    transform: rotate(720deg);
+    opacity: 1;
+    z-index: 2;
+  }
+  75% {
+    transform: rotate(900deg);
+    opacity: 0.5;
+    z-index: 2;
+  }
+  100% {
+    transform: rotate(1080deg);
+    opacity: 0;
+    z-index: 0;
+  }
+}
+@keyframes bkg {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+    z-index: 0;
+  }
+}
+.main {
+  z-index: 1;
+}
+
+h2, address, p, ul, a {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, footer h2 {
+  font-family: "Shrikhand", cursive;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  position: relative;
+}
+header h1 {
+  margin-top: 0;
+  padding-top: 20px;
+}
+header h2 {
+  margin-top: 0;
+}
+header address {
+  font-style: normal;
+  font-weight: bold;
+  background-color: #dddddd;
+  padding: 20px;
+  box-shadow: 1px 1px 4px black;
+}
+header address i {
+  padding-right: 15px;
+}
+header div {
+  background-color: #f1f1f1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+header div p {
+  font-family: sans-serif;
+  padding: 10px;
+}
+header div button {
+  background: linear-gradient(180deg, #FF79DA 10%, #9356DC 100%);
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 1px 0px 10px -5px black;
+  font-family: "Roboto", sans-serif;
+}
+header div button:hover {
+  box-shadow: 1px 1px 5px 1px black;
+  opacity: 0.8;
+}
+
+#Fonctionnement {
+  padding: 10px;
+}
+#Fonctionnement ul {
+  padding-left: 0;
+}
+#Fonctionnement ul li {
+  padding: 20px;
+  padding-right: 5px;
+  margin: 10px 10px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  position: relative;
+  box-shadow: 0px 2px 7px black;
+}
+#Fonctionnement ul li:hover {
+  background-color: #d7bef4;
+}
+#Fonctionnement ul li:hover i {
+  color: #9356DC;
+}
+#Fonctionnement ul li span {
+  background-color: #9356DC;
+  position: absolute;
+  left: -13px;
+  top: 15px;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+}
+#Fonctionnement ul li i {
+  margin-left: 0px;
+  margin-right: 10px;
+  min-width: 20px;
+}
+
+#Restaurants {
+  background-color: #f1f1f1;
+  padding: 20px 10px 30px 10px;
+}
+#Restaurants article {
+  height: 280px;
+  position: relative;
+  margin-bottom: 20px;
+}
+#Restaurants article #La_palette_du_goût {
+  background-position: center bottom 50px;
+  background-image: url(../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+#Restaurants article #La_note_enchantée {
+  background-position: center bottom 40px;
+  background-image: url(../images/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+#Restaurants article #À_la_française {
+  background-position: left 0px top -80px;
+  background-image: url(../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+#Restaurants article #Le_délice_des_sens {
+  background-position: top -90px center;
+  background-image: url(../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+#Restaurants article .info {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 25px;
+  background-color: white;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#Restaurants article .info h2, #Restaurants article .info address {
+  padding-left: 20px;
+  color: black;
+}
+#Restaurants article .info h2 {
+  margin-bottom: 5px;
+}
+#Restaurants article .info address {
+  font-family: sans-serif;
+  font-style: normal;
+}
+
+#La_palette_du_goût div, #La_note_enchantée div {
+  color: #0f9b78;
+}
+
+#La_palette_du_goût div p, #La_note_enchantée div p {
+  background-color: #99E2D0;
+  width: 80px;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  right: 15px;
+  border-radius: 2px;
+}
+
+#La_note_enchantée, #La_palette_du_goût, #À_la_française, #Le_délice_des_sens {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 265px;
+  border-radius: 20px 20px 0 0;
+}
+
+.fa-heart {
+  padding-right: 30px;
+  padding-top: 30px;
+  font-size: 1.8em;
+  text-shadow: 0px 0px 5px black;
+  color: white;
+}
+.fa-heart:hover {
+  color: #d900fa;
+  text-shadow: none;
+}
+
+footer {
+  background-color: #404040;
+  color: #f4f4f4;
+  padding: 20px;
+}
+footer h2 {
+  margin-top: 0;
+  font-weight: lighter;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer i {
+  padding-right: 10px;
+  min-width: 20px;
+}
+
+@media screen and (min-width: 305px) {
+  #Restaurants article #La_note_enchantée {
+    background-position: center bottom -70px;
+  }
+
+  #Restaurants article #Le_délice_des_sens {
+    background-position: center bottom 60px;
+  }
+}
+@media screen and (min-width: 580px) {
+  #Restaurants article {
+    height: 370px;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  #Restaurants article .info {
+    height: 80px;
+  }
+
+  #Restaurants article #La_palette_du_goût {
+    background-position: center;
+  }
+
+  #Restaurants article #À_la_française {
+    background-position: center;
+  }
+
+  #Restaurants article #La_note_enchantée {
+    background-position: center;
+  }
+
+  #Restaurants article #Le_délice_des_sens {
+    background-position: center bottom -50px;
+  }
+}
+@media screen and (min-width: 760px) {
+  #Restaurants h2, #Fonctionnement h2, footer {
+    text-align: center;
+  }
+
+  #Fonctionnement ul {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  #Fonctionnement ul li {
+    height: 80px;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+  }
+  #Fonctionnement ul li i {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 900px) {
+  #Restaurants article #La_palette_du_goût {
+    background-position: center bottom -150px;
+  }
+
+  #Restaurants article #À_la_française {
+    background-position: center bottom -170px;
+  }
+
+  #Restaurants article #Le_délice_des_sens {
+    background-position: center bottom -150px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  header button {
+    font-size: 1em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

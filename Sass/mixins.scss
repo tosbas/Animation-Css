@@ -1,0 +1,58 @@
+// Polices
+
+@mixin Roboto
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin Shrikhand
+{
+    font-family: 'Shrikhand', cursive;
+}
+
+// button
+
+@mixin button
+{
+    background: linear-gradient(180deg, $secondaire-colors 10%, $primaire-colors 100%);
+    padding: 10px 15px;
+    border: none;
+    color: $button-colors;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: $box-shadows;
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin button-hover
+{
+    box-shadow: $box-shadows-hover;
+    opacity: 0.8;
+}
+
+// footer
+
+@mixin footer
+{
+    background-color: #404040;
+	color: #f4f4f4;
+    padding: 20px;
+}
+
+@mixin footer_h2
+{
+    margin-top: 0;
+	font-weight: lighter;
+}
+
+@mixin footer_a
+{
+    text-decoration: none;
+	color: white;
+}
+
+@mixin footer_i
+{
+    padding-right: 10px;
+	min-width: 20px;
+}
