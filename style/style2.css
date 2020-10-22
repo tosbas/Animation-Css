@@ -1,0 +1,283 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+.header__h1, .Présentation__h2, .footer__h2 {
+  font-family: "Shrikhand", cursive;
+}
+
+.Menu__h3, .Menu__prix, .footer {
+  font-family: "Roboto", sans-serif;
+}
+
+.header__h1 {
+  text-align: center;
+  position: relative;
+}
+.header i {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+.header .fa-arrow-left {
+  font-size: 0.7em;
+  color: black;
+}
+.header__img1, .header__img2, .header__img3, .header__img4 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+}
+.header__img1 {
+  background-image: url(../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-position: center;
+}
+.header__img2 {
+  background-image: url(../images/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-position: bottom;
+}
+.header__img3 {
+  background-image: url(../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-position: bottom 25px left -40px;
+}
+.header__img4 {
+  background-image: url(../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-position: center bottom 20px;
+}
+
+.Présentation {
+  border-radius: 30px 30px 0 0;
+  margin-top: -50px;
+  width: 100%;
+  background-color: #eeeeee;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.Présentation__h2 {
+  margin-top: 0;
+  padding-left: 20px;
+  font-size: 1.6em;
+}
+.Présentation__titre {
+  display: flex;
+  justify-content: space-between;
+}
+.Présentation .fa-heart {
+  padding-right: 30px;
+  font-size: 1.7em;
+  text-shadow: 0px 0px 5px black;
+  color: white;
+}
+.Présentation .commande {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  justify-content: center;
+  display: flex;
+}
+.Présentation .commande__btn {
+  background: linear-gradient(180deg, #FF79DA 10%, #9356DC 100%);
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 1px 0px 10px -5px black;
+  font-family: "Roboto", sans-serif;
+}
+.Présentation .commande__btn:hover {
+  box-shadow: 1px 1px 5px 1px black;
+  opacity: 0.8;
+}
+
+.Menu {
+  animation: trans 700ms 1s both;
+}
+.Menu__h2 {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: lighter;
+  padding-left: 20px;
+  font-size: 1em;
+}
+.Menu__h2 span {
+  border-bottom: #99E2D0 4px solid;
+  padding-bottom: 5px;
+}
+.Menu__h3, .Menu__p {
+  padding-left: 10px;
+}
+.Menu__prix {
+  padding-right: 20px;
+  min-width: 50px;
+  align-items: flex-end;
+  display: flex;
+}
+.Menu__Entrées {
+  animation: trans 700ms 1.5s both;
+  width: 75%;
+}
+.Menu__Plats {
+  animation: trans 700ms 2s both;
+  width: 75%;
+}
+.Menu__Desserts {
+  animation: trans 700ms 2.5s both;
+  width: 75%;
+}
+.Menu__h3 {
+  margin-bottom: 0;
+}
+.Menu__details {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px 20px 30px;
+  justify-content: space-between;
+  box-shadow: 1px 1px 5px 0 black;
+  animation: trans 1s 1.5s both;
+  cursor: pointer;
+}
+.Menu__details:hover .Menu__h3, .Menu__details:hover .Menu__p {
+  width: 60%;
+}
+.Menu__details:hover .Menu__prix {
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  transition: all 500ms;
+  transform-origin: right;
+}
+.Menu__details:hover .Menu__prix .Menu__prixEuros {
+  animation: fav 1s infinite;
+  width: 50px;
+}
+.Menu__h3, .Menu__p {
+  font-family: sans-serif;
+  margin-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.Menu__p {
+  margin-top: 5px;
+}
+
+@keyframes fav {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+@keyframes trans {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.footer {
+  background-color: #404040;
+  color: #f4f4f4;
+  padding: 20px;
+}
+.footer__h2 {
+  margin-top: 0;
+  font-weight: lighter;
+}
+.footer__link {
+  text-decoration: none;
+  color: white;
+}
+.footer i {
+  padding-right: 10px;
+  min-width: 20px;
+}
+
+@media screen and (min-width: 620px) {
+  .header__img4 {
+    background-position: bottom;
+  }
+  .header__img3 {
+    background-position: center bottom 20px;
+  }
+}
+@media screen and (min-width: 726px) {
+  .header__img4 {
+    background-position: center bottom 20px;
+  }
+}
+@media screen and (min-width: 915px) {
+  .header__img1, .header__img2, .header__img3, .header__img4 {
+    height: 500px;
+  }
+  .header__img1 {
+    background-position: center bottom -50px;
+  }
+  .header__img4 {
+    background-position: center bottom 20px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .header {
+    background-color: white;
+  }
+  .header i {
+    padding-top: 30px;
+  }
+  .header__h1 {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+  .headerimg3 {
+    background-position: center bottom;
+  }
+  .header__img4 {
+    background-position: center bottom 20px;
+  }
+
+  .Présentation {
+    width: auto;
+    padding-bottom: 10px;
+  }
+
+  .commande__btn {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1269px) {
+  .header__img1 {
+    background-position: center bottom -80px;
+  }
+  .header__img3 {
+    background-position: center bottom -100px;
+  }
+}
+@media screen and (min-width: 1516px) {
+  .header__img1 {
+    background-position: center bottom -150px;
+  }
+  .header__img3 {
+    background-position: center bottom -180px;
+  }
+  .header__img4 {
+    background-position: center bottom -40px;
+  }
+}
+@media screen and (min-width: 1730px) {
+  .header__img1 {
+    background-position: center bottom -280px;
+  }
+  .header__img3 {
+    background-position: center bottom -250px;
+  }
+  .header__img4 {
+    background-position: center bottom -80px;
+  }
+}
+
+/*# sourceMappingURL=style2.css.map */
