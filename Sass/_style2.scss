@@ -254,6 +254,27 @@ body {
     
 }
 
+@media screen and (min-width: 342px)
+{
+    .header__img2
+    {
+        background-position: center;
+    }
+    .header__img3
+    {
+        background-position: center bottom -20px;
+    }
+}
+
+@media screen and (min-width: 580px)
+{
+    .Présentation
+    {
+        max-width: 1100px;
+        margin: auto;
+        margin-top: -50px;
+    }
+}
 @media screen and (min-width: 620px)
 {
     .header
@@ -262,10 +283,14 @@ body {
         {
             background-position: bottom;
         }
-        &__img3
-        {
-            background-position: center bottom 20px;
-        }
+    }
+}
+
+@media screen and (min-width: 670px)
+{
+    .header__img3
+    {
+        background-position: center bottom -20px;
     }
 }
 
@@ -277,6 +302,22 @@ body {
         {
             background-position: center bottom 20px;
         }
+    }
+}
+
+@media screen and (min-width:760px)
+{
+    .footer
+    {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:776px)
+{
+    .header__img3
+    {
+        background-position: center bottom -100px;
     }
 }
 
