@@ -111,6 +111,7 @@ body {
   padding-right: 20px;
   min-width: 50px;
   align-items: flex-end;
+  padding-bottom: 20px;
   display: flex;
 }
 .Menu__Entrées {
@@ -138,6 +139,9 @@ body {
   animation: trans 1s 1.5s both;
   cursor: pointer;
 }
+.Menu__details:hover {
+  overflow: hidden;
+}
 .Menu__details:hover .Menu__h3, .Menu__details:hover .Menu__p {
   width: 60%;
 }
@@ -150,6 +154,27 @@ body {
 .Menu__details:hover .Menu__prix .Menu__prixEuros {
   animation: fav 1s infinite;
   width: 50px;
+}
+.Menu__details:hover .Menu__prix .Menu__circle {
+  background: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  animation: icon 1s ease-in-out;
+}
+.Menu__details:hover .Menu__prix .Menu__circle .Menu__icon {
+  border-top: 5px solid #99E2D0;
+  border-left: 5px solid #99E2D0;
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  width: 10px;
+  height: 14px;
+  border-radius: 1px;
+  transform: rotate(220deg);
 }
 .Menu__h3, .Menu__p {
   font-family: sans-serif;
@@ -168,6 +193,16 @@ body {
   }
   100% {
     transform: translateX(-50px);
+  }
+}
+@keyframes icon {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) rotate(360deg);
   }
 }
 @keyframes trans {
