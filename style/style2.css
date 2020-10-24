@@ -60,19 +60,31 @@ body {
   font-size: 1.6em;
 }
 .Présentation__titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .Présentation .fa-heart {
   padding-right: 30px;
   font-size: 1.7em;
   text-shadow: 0px 0px 5px black;
-  color: white;
+  color: #FFF;
+}
+.Présentation .fa-heart:hover {
+  color: #d900fa;
+  text-shadow: none;
 }
 .Présentation .commande {
   padding-top: 30px;
   padding-bottom: 50px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .Présentation .commande__btn {
@@ -92,6 +104,7 @@ body {
 
 .Menu {
   animation: trans 700ms 1s both;
+  -webkit-animation: trans 700ms 1s both;
 }
 .Menu__h2 {
   text-transform: uppercase;
@@ -110,33 +123,46 @@ body {
 .Menu__prix {
   padding-right: 20px;
   min-width: 50px;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
   padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .Menu__Entrées {
   animation: trans 700ms 1.5s both;
+  -webkit-animation: 700ms 1.5s both;
   width: 75%;
 }
 .Menu__Plats {
   animation: trans 700ms 2s both;
+  -webkit-animation: trans 700ms 2s both;
   width: 75%;
 }
 .Menu__Desserts {
   animation: trans 700ms 2.5s both;
+  -webkit-animation: trans 700ms 2.5s both;
   width: 75%;
 }
 .Menu__h3 {
   margin-bottom: 0;
 }
 .Menu__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: white;
   border-radius: 20px;
   margin: 20px 20px 30px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-shadow: 1px 1px 5px 0 black;
   box-shadow: 1px 1px 5px 0 black;
   animation: trans 1s 1.5s both;
+  -webkit-animation: trans 1s 1.5s both;
   cursor: pointer;
 }
 .Menu__details:hover {
@@ -148,10 +174,15 @@ body {
 .Menu__details:hover .Menu__prix {
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
   transition: all 500ms;
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
   transform-origin: right;
 }
 .Menu__details:hover .Menu__prix .Menu__prixEuros {
+  -webkit-animation: fav 1s infinite;
   animation: fav 1s infinite;
   width: 50px;
 }
@@ -163,6 +194,7 @@ body {
   right: 20px;
   width: 32px;
   height: 32px;
+  -webkit-animation: icon 1s ease-in-out;
   animation: icon 1s ease-in-out;
 }
 .Menu__details:hover .Menu__prix .Menu__circle .Menu__icon {
@@ -174,12 +206,15 @@ body {
   width: 10px;
   height: 14px;
   border-radius: 1px;
+  -webkit-transform: rotate(220deg);
+  -ms-transform: rotate(220deg);
   transform: rotate(220deg);
 }
 .Menu__h3, .Menu__p {
   font-family: sans-serif;
   margin-right: 10px;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -187,31 +222,71 @@ body {
   margin-top: 5px;
 }
 
-@keyframes fav {
+@-webkit-keyframes fav {
   0% {
+    -webkit-transform: translateX(-50px);
     transform: translateX(-50px);
   }
   100% {
+    -webkit-transform: translateX(-50px);
     transform: translateX(-50px);
+  }
+}
+@keyframes fav {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+  }
+  100% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+  }
+}
+@-webkit-keyframes icon {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(360deg);
+    transform: translateX(0px) rotate(360deg);
   }
 }
 @keyframes icon {
   0% {
     opacity: 0;
+    -webkit-transform: translateX(50px);
     transform: translateX(50px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(0px) rotate(360deg);
     transform: translateX(0px) rotate(360deg);
+  }
+}
+@-webkit-keyframes trans {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 @keyframes trans {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(50px);
     transform: translateY(50px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }

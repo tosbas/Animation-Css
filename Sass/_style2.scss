@@ -89,21 +89,34 @@ body {
     }
     &__titre
     {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     .fa-heart
     {
         padding-right: 30px;
         font-size: 1.7em;
         text-shadow: 0px 0px 5px black;
-        color: white;
+        color: #FFF;
+        &:hover
+        {
+          color: #d900fa;
+          text-shadow: none;
+        }
     }
     .commande
     {
         padding-top: 30px;
         padding-bottom: 50px;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         &__btn
         {
@@ -122,6 +135,7 @@ body {
 .Menu
 {
     animation: trans 700ms 1s both;
+    -webkit-animation: trans 700ms 1s both;
     &__h2
     {
         text-transform: uppercase;
@@ -144,22 +158,30 @@ body {
     {
         padding-right: 20px;
         min-width: 50px;
-        align-items: flex-end;
-        display: flex;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        padding-bottom: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;      
     }   
     &__Entrées
     {
         animation: trans 700ms 1.5s both;
+        -webkit-animation:  700ms 1.5s both;
         width: 75%;
     }
     &__Plats
     {
         animation: trans 700ms 2s both;
+        -webkit-animation: trans 700ms 2s both;
         width: 75%;
     }
     &__Desserts
     {
         animation: trans 700ms 2.5s both;
+        -webkit-animation: trans 700ms 2.5s both ;
         width: 75%;    
     }
 
@@ -169,16 +191,24 @@ body {
     }
     &__details
     {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         background-color: white;
         border-radius: 20px;
         margin:20px 20px 30px;
-        justify-content: space-between;
-        box-shadow: 1px 1px 5px 0 black;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-shadow: 1px 1px 5px 0 black;
+                box-shadow: 1px 1px 5px 0 black;
         animation: trans 1s 1.5s both;
+        -webkit-animation: trans 1s 1.5s both;
         cursor: pointer;
         &:hover
         {
+            overflow: hidden;
+            
             .Menu__h3,.Menu__p
             {
                 width: 60%;
@@ -187,12 +217,43 @@ body {
             {
                 background-color: $Tertiaire-colors;
                 border-radius: 0 20px 20px 0;
+                -webkit-transition: all 500ms;
+                -o-transition: all 500ms;
                 transition: all 500ms;
-                transform-origin: right;
+                -webkit-transform-origin: right;
+                    -ms-transform-origin: right;
+                        transform-origin: right;
                 .Menu__prixEuros
                 {
-                    animation: fav 1s infinite;
+                    -webkit-animation: fav 1s infinite;
+                            animation: fav 1s infinite;
                     width: 50px;
+                }
+                .Menu__circle
+                {
+                    background: #FFF;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 25px;
+                    right: 20px;
+                    width: 32px;
+                    height: 32px;
+                    -webkit-animation: icon 1s ease-in-out;
+                            animation: icon 1s ease-in-out;
+                    .Menu__icon
+                    {
+                        border-top: 5px solid #99E2D0;
+                        border-left: 5px solid #99E2D0;
+                        position: absolute;
+                        top: 4px;
+                        left: 8px;
+                        width: 10px;
+                        height: 14px;
+                        border-radius: 1px;
+                        -webkit-transform: rotate(220deg);
+                            -ms-transform: rotate(220deg);
+                                transform: rotate(220deg);
+                    }
                 }
             }
         } 
@@ -203,7 +264,8 @@ body {
         font-family: sans-serif;
         margin-right: 10px;
         overflow: hidden;
-        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
         white-space: nowrap;
     }
     &__p
@@ -212,13 +274,75 @@ body {
     }
 }
 
+@-webkit-keyframes fav{
+    0%{
+        
+        -webkit-transform: translateX(-50px);
+        
+                transform: translateX(-50px);
+    }
+    100%{
+        -webkit-transform: translateX(-50px);
+                transform: translateX(-50px);
+    }
+}
+
 @keyframes fav{
     0%{
         
-        transform: translateX(-50px);
+        -webkit-transform: translateX(-50px);
+        
+                transform: translateX(-50px);
     }
     100%{
-        transform: translateX(-50px);
+        -webkit-transform: translateX(-50px);
+                transform: translateX(-50px);
+    }
+}
+
+@-webkit-keyframes icon
+{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(50px);
+                transform: translateX(50px);
+        
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0px) rotate(360deg);
+                transform: translateX(0px) rotate(360deg);
+       
+    }
+}
+
+@keyframes icon
+{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(50px);
+                transform: translateX(50px);
+        
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0px) rotate(360deg);
+                transform: translateX(0px) rotate(360deg);
+       
+    }
+}
+
+
+@-webkit-keyframes trans {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+                transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);  
     }
 }
 
@@ -226,13 +350,16 @@ body {
 @keyframes trans {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        -webkit-transform: translateY(50px);
+                transform: translateY(50px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);  
+        -webkit-transform: translateY(0);
+                transform: translateY(0);  
     }
 }
+
 
 // footer
 

@@ -1,10 +1,17 @@
 @charset "UTF-8";
 body {
   margin: 0;
+  -webkit-animation: z -1s;
   animation: z -1s;
+  -webkit-animation-duration: 3.5s;
   animation-duration: 3.5s;
 }
 
+@-webkit-keyframes z {
+  to {
+    overflow: hidden;
+  }
+}
 @keyframes z {
   to {
     overflow: hidden;
@@ -20,6 +27,7 @@ body {
 
 .loader__spinner {
   z-index: 0;
+  -webkit-animation: spin 3s linear forwards;
   animation: spin 3s linear forwards;
   border: solid 15px #9356DC;
   border-top-color: #FFF;
@@ -41,60 +49,136 @@ body {
   left: 0;
   z-index: 0;
   opacity: 0;
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
   transform-origin: top;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-animation: bkg 3s forwards;
   animation: bkg 3s forwards;
 }
 
+@-webkit-keyframes spin {
+  5% {
+    opacity: 1;
+    z-index: 2;
+  }
+  25% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    opacity: 1;
+    z-index: 2;
+  }
+  50% {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    opacity: 1;
+    z-index: 2;
+  }
+  75% {
+    -webkit-transform: rotate(900deg);
+    transform: rotate(900deg);
+    opacity: 0.5;
+    z-index: 2;
+  }
+  100% {
+    -webkit-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    opacity: 0;
+    z-index: 0;
+  }
+}
 @keyframes spin {
   5% {
     opacity: 1;
     z-index: 2;
   }
   25% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
     opacity: 1;
     z-index: 2;
   }
   50% {
+    -webkit-transform: rotate(720deg);
     transform: rotate(720deg);
     opacity: 1;
     z-index: 2;
   }
   75% {
+    -webkit-transform: rotate(900deg);
     transform: rotate(900deg);
     opacity: 0.5;
     z-index: 2;
   }
   100% {
+    -webkit-transform: rotate(1080deg);
     transform: rotate(1080deg);
     opacity: 0;
+    z-index: 0;
+  }
+}
+@-webkit-keyframes bkg {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    z-index: 1;
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    z-index: 1;
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    z-index: 1;
+  }
+  90% {
+    opacity: 0.5;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
     z-index: 0;
   }
 }
 @keyframes bkg {
   0% {
     opacity: 1;
+    -webkit-transform: scale(1);
     transform: scale(1);
     z-index: 1;
   }
   60% {
     opacity: 1;
+    -webkit-transform: scale(1);
     transform: scale(1);
     z-index: 1;
   }
   70% {
     opacity: 1;
+    -webkit-transform: scale(1);
     transform: scale(1);
     z-index: 1;
   }
   90% {
     opacity: 0.5;
+    -webkit-transform: scale(0.5);
     transform: scale(0.5);
     z-index: 1;
   }
   100% {
     opacity: 0;
+    -webkit-transform: scale(0);
     transform: scale(0);
     z-index: 0;
   }
@@ -119,6 +203,7 @@ body {
   font-weight: bold;
   background-color: #dddddd;
   padding: 20px;
+  -webkit-box-shadow: 1px 1px 4px black;
   box-shadow: 1px 1px 4px black;
 }
 .header__address i {
@@ -163,6 +248,7 @@ body {
   background-color: #f1f1f1;
   list-style-type: none;
   position: relative;
+  -webkit-box-shadow: 1px 0px 10px -5px black;
   box-shadow: 1px 0px 10px -5px black;
 }
 .Fonctionnement__element:hover {
@@ -196,6 +282,9 @@ body {
   height: 280px;
   position: relative;
   margin-bottom: 20px;
+}
+.Restaurants__link {
+  text-decoration: none;
 }
 .Restaurants__news {
   color: #0f9b78;
@@ -232,7 +321,11 @@ body {
   background-color: white;
   width: 100%;
   border-radius: 0 0 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .Restaurants__address, .Restaurants__Titre {
@@ -249,6 +342,7 @@ body {
   font-size: 1.8em;
   text-shadow: 0px 0px 5px black;
   color: white;
+  cursor: pointer;
 }
 .Restaurants__btn .fa-heart:hover {
   color: #d900fa;
@@ -311,6 +405,8 @@ body {
   }
 
   .Fonctionnement__liste {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 1100px;
     margin: auto;
