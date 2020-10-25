@@ -103,8 +103,8 @@ body {
 }
 
 .Menu {
-  animation: trans 700ms 1s both;
   -webkit-animation: trans 700ms 1s both;
+  animation: trans 700ms 1s both;
 }
 .Menu__h2 {
   text-transform: uppercase;
@@ -132,18 +132,18 @@ body {
   display: flex;
 }
 .Menu__Entrées {
-  animation: trans 700ms 1.5s both;
   -webkit-animation: 700ms 1.5s both;
+  animation: trans 700ms 1.5s both;
   width: 75%;
 }
 .Menu__Plats {
-  animation: trans 700ms 2s both;
   -webkit-animation: trans 700ms 2s both;
+  animation: trans 700ms 2s both;
   width: 75%;
 }
 .Menu__Desserts {
-  animation: trans 700ms 2.5s both;
   -webkit-animation: trans 700ms 2.5s both;
+  animation: trans 700ms 2.5s both;
   width: 75%;
 }
 .Menu__h3 {
@@ -161,8 +161,8 @@ body {
   justify-content: space-between;
   -webkit-box-shadow: 1px 1px 5px 0 black;
   box-shadow: 1px 1px 5px 0 black;
-  animation: trans 1s 1.5s both;
   -webkit-animation: trans 1s 1.5s both;
+  animation: trans 1s 1.5s both;
   cursor: pointer;
 }
 .Menu__details:hover {
