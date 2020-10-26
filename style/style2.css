@@ -136,6 +136,10 @@ body {
   animation: trans 700ms 1.5s both;
   width: 75%;
 }
+.Menu__p {
+  text-align: left;
+  font-size: 16px;
+}
 .Menu__Plats {
   -webkit-animation: trans 700ms 2s both;
   animation: trans 700ms 2s both;
@@ -148,6 +152,7 @@ body {
 }
 .Menu__h3 {
   margin-bottom: 0;
+  font-size: 18.72px;
 }
 .Menu__details {
   display: -webkit-box;
